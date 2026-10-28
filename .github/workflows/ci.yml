@@ -27,8 +27,8 @@ jobs:
           chmod +x gradlew
           ./gradlew --no-daemon assembleRelease
       
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: androidtv-jadul-apk
-          path: app/build/outputs/apk/release/app-release.apk
+     - name: Upload APK Artifact
+  uses: actions/upload-artifact@v4
+  with:
+    name: androidtv-jadul-apk
+    path: '**/build/outputs/apk/release/*.apk'
